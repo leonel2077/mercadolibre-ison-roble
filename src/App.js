@@ -1,11 +1,11 @@
 import './App.css';
-import Product from './components/ProductList';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   
   return (
     <div>
-      < Product />
+      < HomePage />
     </div>
   )
 
