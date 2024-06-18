@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const header = (
-    <img alt={product.title} src={product.thumbnail} style={{ width: '100%' }} />
+    <img alt={product.title} src={product.thumbnail} style={{ width: '75%' }} />
   );
 
   const footer = (

@@ -6,7 +6,7 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-const ProductDeteail = ({ product }) => {
+const ProductDetail = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
 
  // const onAddToCart = () => {
@@ -16,12 +16,12 @@ const ProductDeteail = ({ product }) => {
   console.log(product)
   const itemTemplate = (item) => {
     return ( 
-    <img src={item.secure_url} alt={item.id} style={{ width: '25%' }} />
+    <img src={item.secure_url} alt={item.id} style={{ width: '50%' }} />
     );
   };
 
   const thumbnailTemplate = (item) => {
-    return <img src={item.secure_url} alt={item.id} style={{ width: '250px', height: '250px'}}/>
+    return <img src={item.secure_url} alt={item.id} style={{ width: '125px', height: '125px'}}/>
 }
   return (
     <div>
@@ -45,4 +45,4 @@ const ProductDeteail = ({ product }) => {
   );
 };
 
-export default ProductDeteail;
+export default ProductDetail;
