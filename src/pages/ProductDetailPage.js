@@ -16,14 +16,9 @@ const ProductDetailPage = () => {
     fetchProduct();
   }, [id]);
 
-  // Si no necesitas la búsqueda en esta página, elimina esta línea y la referencia a Navbar
-  const handleSearch = (query) => {
-    console.log(query);
-  };
-
   return (
     <div>
-      <Navbar onSearch={handleSearch} />
+      <Navbar />
       {product ? <ProductDetail product={product} /> : <p>Loading...</p>}
     </div>
   );
