@@ -17,7 +17,12 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="card flex justify-content-center">
-      <Card title={product.title} subTitle={`$${product.price}`} footer={footer} header={header} style={{ width: '300px', marginBottom: '2em' }}>
+      <Card 
+        title={product.title} 
+        subTitle={`$${product.price}`} 
+        footer={footer} 
+        header={header} 
+        style={{ width: '300px', marginBottom: '2em' }}>
       </Card>
     </div>
   );
