@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import ProductList from '../components/ProductList';
+import { SearchContext } from '../contexts/SearchContext';
 
 const HomePage = () => {
-  const [products, setProducts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('velez');
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${searchQuery}`);
-      const data = await response.json();
-      setProducts(data.results);
-      console.log(data.results);
-    };
-    fetchProducts();
-  }, [searchQuery]);
-
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
+  const { products } = useContext(SearchContext);
+  
   return (
     <div>
-      <Navbar onSearch={handleSearch} />
+      <Navbar />
       <ProductList products={products} />
     </div>
   );

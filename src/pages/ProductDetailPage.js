@@ -19,7 +19,7 @@ const ProductDetailPage = () => {
   return (
     <div>
       <Navbar />
-      {product ? <ProductDetail product={product} /> : <p>Loading...</p>}
+      {product ? <ProductDetail product={product} /> : <p>Cargando...</p>}
     </div>
   );
 };
