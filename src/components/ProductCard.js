@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const header = (
-    <img alt={product.title} src={product.thumbnail} style={{ width: '75%' }} />
+    <img alt={product.title} src={product.thumbnail} className="product-image" />
   );
 
   const footer = (
@@ -18,12 +18,12 @@ const ProductCard = ({ product }) => {
   return (
     <div className="card flex justify-content-center">
       <Card 
-        title={product.title} 
+        title={<span className="product-title" title={product.title}>{product.title}</span>}
         subTitle={`$${product.price}`} 
         footer={footer} 
         header={header} 
-        style={{ width: '300px', marginBottom: '2em' }}>
-      </Card>
+        className="product-card"
+      />
     </div>
   );
 };
